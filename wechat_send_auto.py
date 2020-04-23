@@ -97,10 +97,12 @@ def ctrl_v():
     win32api.keybd_event(17,0,win32con.KEYEVENTF_KEYUP,0)
 cmd1 = 'cd C:\Program Files (x86)\Tencent\WeChat'
 cmd2='start WeChat.exe'
+os.system(cmd1+"&"+cmd2)
 sleep(3)
 #########微信对话框的位置
 x1, y1 = 990,786
-mouse_click(x, y)
+#mouse_click(x, y)
+############ps 像素一定要小心调整好
 set_text()
 ctrl_v()
 tap_enter()
